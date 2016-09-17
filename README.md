@@ -30,7 +30,7 @@ I just want to make things that look clean
 3. 'Why We See What We Do' Purves and Lotto  
  
 
-### I THINK ART IS COOL AND LOVE INSTALLATIONS particulary james turrell
+### I THINK ART IS COOL AND LOVE INSTALLATIONS
 
 ![](http://i.giphy.com/ItWzWnWSjPsbe.gif)
 
