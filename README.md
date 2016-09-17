@@ -5,7 +5,7 @@ date: "`r format(Sys.Date())`"
 output: github_document
 ---
 
-# **Matt** *is* ~~Here~~  
+# Matt *is* ~~Here~~  :thumbsup:
 
 ## Some things about me
 
@@ -16,9 +16,9 @@ output: github_document
 
 > I'll try to keep [D. Rams 10 principles](http://www.archdaily.com/198583/dieter-rams-10-principles-of-%25e2%2580%259cgood-design%25e2%2580%259d) in my mind when making plots and visualtions
 
-    Favorite Book     | Favorite Movie
-
-Games of Thrones      | LOTR
+|    Favorite Book     | Favorite Movie  |
+|----------------------|-----------------|
+| Games of Thrones     | LOTR
 
 ####Recent Reads
 
