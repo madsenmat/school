@@ -1,6 +1,10 @@
 ---
 title: "helloworld"
-output: html_document
+author: "Matt Madsen"
+date: "Sept 15 2016"
+output: github_document
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
