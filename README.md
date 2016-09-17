@@ -12,6 +12,8 @@
  
 I just want to make things that look clean
 
+> Clean design is the best design D. Trump
+
 |    Favorite Book     | Favorite Movie  |
 |----------------------|-----------------|
 | Games of Thrones     | LOTR
