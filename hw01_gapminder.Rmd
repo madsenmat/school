@@ -30,7 +30,7 @@ p + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
 
 q <- ggplot(subset(gapminder, subset = country == 'Canada') aes (x = year, y = gppPercap)
 
-q + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")```
+q + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm") ```
 
 
 
