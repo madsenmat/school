@@ -1,4 +1,3 @@
-
 ---
 title: "Read_Me"
 author: "Matt Madsen"
@@ -29,7 +28,7 @@ Games of Thrones      | LOTR
 3. 'Why We See What We Do' Purves and Lotto  
  
 
-### I THINK ART IS COOL AND LOVE INSTALLATIONS #####particulary james turrell
+### I THINK ART IS COOL AND LOVE INSTALLATIONS ###### particulary james turrell
 
 
 
