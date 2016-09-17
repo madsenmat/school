@@ -32,7 +32,7 @@ I just want to make things that look clean
 
 ### I THINK ART IS COOL AND LOVE INSTALLATIONS particulary james turrell
 
-
+![](http://i.giphy.com/ItWzWnWSjPsbe.gif)
 ![](http://i.giphy.com/12js4kjVoX8Chq.gif)
 
-![](http://i.giphy.com/l3vR4DHwzBDMoDddu.gif)
+![Current Feels](http://i.giphy.com/l3vR4DHwzBDMoDddu.gif)
