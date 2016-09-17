@@ -34,6 +34,13 @@ I just want to make things that look clean
 
 ![](http://i.giphy.com/ItWzWnWSjPsbe.gif)
 
-How I Felt After Completing This.... 
+
+
+- I editted everything locally using RStudio and therefore saved, committed and pushed to github.com
+    + I found I was going through the github and refreshing alot and commiting alot I feel like I don't understand this process as it was disruptive to my workflow which I can't see pros doing. 
+
+- I had trouble once when I clicked amend but that resolved its self when I closed everything and relaunched. 
+
+Still how I Felt After Completing This.... 
 
 ![Current Feels](http://i.giphy.com/l3vR4DHwzBDMoDddu.gif)
