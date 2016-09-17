@@ -5,26 +5,38 @@ date: "`r format(Sys.Date())`"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+install.packages("gapminder")
+library(gapminder)
 
-## R Markdown
+install.packages("ggplot2")
+library(ggplot2)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+head(gapminder)
+tail(gapminder)
+summary(gapminder)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+plot(lifeExp ~ year, gapminder)
 
-```{r cars}
-summary(cars)
-```
+hist(gapminder$gdpPercap)
 
-## Including Plots
+table(gapminder$gdpPercap)
 
-You can also embed plots, for example:
+plot(lifeExp ~ log(gdpPercap), gapminder)
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+p <- ggplot(subset(gapminder, subset = country == 'Canada') aes (x = year, y = lifeExp) 
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+p + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
+
+q <- ggplot(subset(gapminder, subset = country == 'Canada') aes (x = year, y = gppPercap)
+
+q + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
+
+
+
+
+
+
+
+
+
+
