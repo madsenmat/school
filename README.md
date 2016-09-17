@@ -32,6 +32,6 @@ I just want to make things that look clean
 
 ### I THINK ART IS COOL AND LOVE INSTALLATIONS particulary james turrell
 
-![](http://images.adsttc.com/media/images/51a7/b541/b3fc/4b90/2700/03a6/large_jpg/holzherr_james-turrell-roden-crater_1.jpg?1369945404)
+![] (http://images.adsttc.com/media/images/51a7/b541/b3fc/4b90/2700/03a6/large_jpg/holzherr_james-turrell-roden-crater_1.jpg?1369945404)
 
 
