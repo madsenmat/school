@@ -5,7 +5,7 @@ date: "`r format(Sys.Date())`"
 output: github_document
 ---
 
-```{r}
+```{r}```
 
 
 # Matt *is* ~~Here~~  :thumbsup:
@@ -33,5 +33,4 @@ output: github_document
 
 ### I THINK ART IS COOL AND LOVE INSTALLATIONS particulary james turrell
 
-```
 
