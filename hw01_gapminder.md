@@ -1,32 +1,31 @@
+---
+output: 
+  html_document: 
+    keep_md: yes
+---
 hw01\_gapminder
 ================
 Matt Madsen
 2016-09-17
 
-R Markdown
-----------
+install.packages("gapminder") library(gapminder)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+install.packages("ggplot2") library(ggplot2)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+head(gapminder) tail(gapminder) summary(gapminder)
 
-``` r
-summary(cars)
-```
+plot(lifeExp ~ year, gapminder)
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+hist(gapminder$gdpPercap)
 
-Including Plots
----------------
+table(gapminder$gdpPercap)
 
-You can also embed plots, for example:
+plot(lifeExp ~ log(gdpPercap), gapminder)
 
-![](hw01_gapminder_files/figure-markdown_github/pressure-1.png)
+p &lt;- ggplot(subset(gapminder, subset = country == 'Canada') aes (x = year, y = lifeExp)
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+p + geom\_point() + geom\_smooth(lwd = 1, se = FALSE, method = "lm")
+
+q &lt;- ggplot(subset(gapminder, subset = country == 'Canada') aes (x = year, y = gppPercap)
+
+q + geom\_point() + geom\_smooth(lwd = 1, se = FALSE, method = "lm")
