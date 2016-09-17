@@ -5,6 +5,9 @@ date: "`r format(Sys.Date())`"
 output: github_document
 ---
 
+```{r}
+
+
 # Matt *is* ~~Here~~  :thumbsup:
 
 ## Some things about me
@@ -28,7 +31,7 @@ output: github_document
 3. 'Why We See What We Do' Purves and Lotto  
  
 
-### I THINK ART IS COOL AND LOVE INSTALLATIONS ###### particulary james turrell
+### I THINK ART IS COOL AND LOVE INSTALLATIONS particulary james turrell
 
-
+```
 
