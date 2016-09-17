@@ -4,33 +4,56 @@ author: "Matt Madsen"
 date: "`r format(Sys.Date())`"
 output: github_document
 ---
-
-```{r} 
-install.packages("gapminder")
-library(gapminder)
-
-install.packages("ggplot2")
+```{r include = FALSE}
 library(ggplot2)
+```
 
-head(gapminder)
+```{r include = FALSE}
+library(gapminder)
+```
+#Some Facts about the World
+
+#####Tail of the data
+```{r echo = FALSE}
 tail(gapminder)
+```
+
+#####Summary of the data
+
+```{r echo = FALSE}
 summary(gapminder)
+```
 
+#####Has Life Expectancy Increased? 
+
+```{r echo = FALSE}
 plot(lifeExp ~ year, gapminder)
+```
 
+#####How is Wealth Divided?
+
+```{r echo = FALSE}
 hist(gapminder$gdpPercap)
+```
 
-table(gapminder$gdpPercap)
+##How About Canada
 
-plot(lifeExp ~ log(gdpPercap), gapminder)
+Well it looks like we are living longer with the years.... 
 
-p <- ggplot(subset(gapminder, subset = country == 'Canada') aes (x = year, y = lifeExp) 
+```{r echo = FALSE}
+p <- ggplot(subset(gapminder, country == 'Canada'), aes (x = year, y = lifeExp)) 
 
 p + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
+```
 
-q <- ggplot(subset(gapminder, subset = country == 'Canada') aes (x = year, y = gppPercap)
+And getting wealthier...Hot Damn... 
 
-q + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm") ```
+```{r echo = FALSE}
+q <- ggplot(subset(gapminder, country == 'Canada'),  aes (x = year, y = gdpPercap))
+
+q + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
+```
+
 
 
 
