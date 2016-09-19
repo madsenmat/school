@@ -85,3 +85,23 @@ q + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
 ```
 
 ![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-7-1.png)
+
+#### How did Homework 1 go?
+
+-   **Issues:**
+-   Struggled for a bit with the chunks, but eventually figured it out
+-   Having trouble running install.packages(....) as I get an error when I try to run them in a markdown.
+
+> Quitting from lines 9-11 (hw01\_gapminder.Rmd) Error in contrib.url(repos, "source") : trying to use CRAN without setting a mirror Calls: <Anonymous> ... withVisible -&gt; eval -&gt; eval -&gt; install.packages -&gt; contrib.url Execution halted
+
+*my code (originally at top, removed backticks):
+{r}
+install.packages("ggplot2")
+install.packages("gapminder")*
+
+-   Still working on having a better understanding of .rmd and the
+     difference with .md files. Are .md just more workable/edittable?
+
+Still had a great time.
+
+![Current Feels](http://i.giphy.com/jd6TVgsph6w7e.gif)
