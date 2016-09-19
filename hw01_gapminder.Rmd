@@ -4,8 +4,16 @@ author: "Matt Madsen"
 date: "`r format(Sys.Date())`"
 output: github_document
 ---
+
+```{r}
+install.packages(ggplot2)
+install.packages(gapminder)
+```
+
+
 ```{r include = FALSE}
 library(ggplot2)
+library(gapminder)
 ```
 
 ```{r include = FALSE}
@@ -14,7 +22,7 @@ library(gapminder)
 #Some Facts about the World
 
 #####Tail of the data
-```{r echo = FALSE}
+```{r}
 tail(gapminder)
 ```
 
