@@ -1,12 +1,20 @@
 hw01\_gapminder
 ================
 Matt Madsen
-2016-09-17
+2016-09-19
 
-Some Facts about the World
-==========================
+``` r
+library(ggplot2)
+library(gapminder)
+```
+
+### Some Facts about the World
 
 ##### Tail of the data
+
+``` r
+tail(gapminder)
+```
 
     ##       country continent year lifeExp      pop gdpPercap
     ## 1699 Zimbabwe    Africa 1982  60.363  7636524  788.8550
@@ -17,6 +25,10 @@ Some Facts about the World
     ## 1704 Zimbabwe    Africa 2007  43.487 12311143  469.7093
 
 ##### Summary of the data
+
+``` r
+summary(gapminder)
+```
 
     ##         country        continent        year         lifeExp     
     ##  Afghanistan:  12   Africa  :624   Min.   :1952   Min.   :23.60  
@@ -37,19 +49,39 @@ Some Facts about the World
 
 ##### Has Life Expectancy Increased?
 
-![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-5-1.png)
+``` r
+plot(lifeExp ~ year, gapminder)
+```
+
+![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 ##### How is Wealth Divided?
 
-![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-6-1.png)
+``` r
+hist(gapminder$gdpPercap)
+```
+
+![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 How About Canada
 ----------------
 
 Well it looks like we are living longer with the years....
 
-![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-7-1.png)
+``` r
+p <- ggplot(subset(gapminder, country == 'Canada'), aes (x = year, y = lifeExp)) 
+
+p + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
+```
+
+![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
 And getting wealthier...Hot Damn...
 
-![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-8-1.png)
+``` r
+q <- ggplot(subset(gapminder, country == 'Canada'),  aes (x = year, y = gdpPercap))
+
+q + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
+```
+
+![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-7-1.png)

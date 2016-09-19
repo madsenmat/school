@@ -5,42 +5,37 @@ date: "`r format(Sys.Date())`"
 output: github_document
 ---
 
+
 ```{r}
-install.packages(ggplot2)
-install.packages(gapminder)
-```
-
-
-```{r include = FALSE}
 library(ggplot2)
 library(gapminder)
 ```
 
-```{r include = FALSE}
-library(gapminder)
-```
-#Some Facts about the World
+
+
+###Some Facts about the World
 
 #####Tail of the data
+
 ```{r}
 tail(gapminder)
 ```
 
 #####Summary of the data
 
-```{r echo = FALSE}
+```{r}
 summary(gapminder)
 ```
 
 #####Has Life Expectancy Increased? 
 
-```{r echo = FALSE}
+```{r}
 plot(lifeExp ~ year, gapminder)
 ```
 
 #####How is Wealth Divided?
 
-```{r echo = FALSE}
+```{r}
 hist(gapminder$gdpPercap)
 ```
 
@@ -48,7 +43,7 @@ hist(gapminder$gdpPercap)
 
 Well it looks like we are living longer with the years.... 
 
-```{r echo = FALSE}
+```{r}
 p <- ggplot(subset(gapminder, country == 'Canada'), aes (x = year, y = lifeExp)) 
 
 p + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
@@ -56,7 +51,7 @@ p + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
 
 And getting wealthier...Hot Damn... 
 
-```{r echo = FALSE}
+```{r}
 q <- ggplot(subset(gapminder, country == 'Canada'),  aes (x = year, y = gdpPercap))
 
 q + geom_point() + geom_smooth(lwd = 1, se = FALSE, method = "lm")
