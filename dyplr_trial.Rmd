@@ -1,0 +1,87 @@
+---
+title: "dplyr_trial"
+author: "Matt Madsen"
+date: "September 19, 2016"
+output: github_document
+---
+
+
+```{r}
+suppressPackageStartupMessages(library(dplyr))
+library(gapminder)
+```
+
+
+### str outputs data, shows summary
+
+```{r}
+str(gapminder)
+```
+
+### shows top of data
+```{r}
+head(gapminder)
+```
+
+### data.frame runs through it all ahhhhhh
+```{r}
+data.frame(gapminder)
+```
+
+### save a data table 
+```{r}
+gtbl <- tbl_df(gapminder)
+gtbl
+
+```
+
+### shows the factors 
+
+```{r}
+glimpse(gtbl)
+```
+
+### If you feel the urge to store a little snippet of your data:
+```{r}
+(snippet <- subset(gapminder, country == "Canada"))
+```
+
+### Filter, uses logic statements and allows you to find data 
+
+```{r}
+filter(gtbl, lifeExp < 29)
+filter(gtbl, country == "Rwanda")
+```
+
+
+### Pipe operator
+
+Pipe feds into another replaces brackets/braces
+
+```{r}
+gapminder %>% head
+```
+
+Use select to subset the data on variables or column 
+
+```{r}
+select(gtbl, year, lifeExp)
+```
+
+similar but with using pipe operators and only taking top 4
+
+```{r}
+gtbl %>%
+  select(year, lifeExp) %>%
+  head(4)
+```
+
+
+```{r}
+gtbl %>%
+  filter(country == "Cambodia") %>%
+  select(year, lifeExp)
+```
+
+
+

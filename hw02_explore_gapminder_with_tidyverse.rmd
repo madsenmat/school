@@ -1,0 +1,78 @@
+---
+title: "hw02_Explore_Gapminder_with_the_tidyverse"
+author: "Matt Madsen"
+date: "September 20, 2016"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Explore Gapminder with the tidyverse
+
+####This loads the packages required. Install packages if necessary. 
+
+```{r}
+library(tidyverse)
+library(gapminder)
+```
+
+Then we explore the data frame. 
+
+```{r}
+gapminder
+str(gapminder)
+```
+
+
+Glimpse gives us a preview. Tibbles makes this sort of obsolete. 
+
+Head is similar, tibble has also made sort of obsolete. 
+
+Tail is better for looking for errors than Head or glimpse, as errors usually occur here. 
+
+```{r}
+glimpse(gapminder)
+```
+
+
+Let's filter to just certain rows. Let's select just certain columns. 
+
+```{r}
+canada <- filter(gapminder, country == 'Canada' | country == 'Mexico')
+filter(gapminder, year > 2000)
+filter(gapminder, country %in% c("Bulgaria", "Albania"))
+select(gapminder, year, lifeExp)
+select(filter(gapminder, country == 'Canada'), year, lifeExp)
+filter(select(gapminder, year, lifeExp, country), country == "Canada")
+```
+
+Using pipe operator 
+
+ex. main data %>% data manipulation 1 %>% data manipulation 2 
+
+*shortcut command* MAC  CMD SHFT M
+
+Pipeline will autocomplete info in data.frames
+
+```{r}
+gapminder %>% 
+  filter(country == 'Canada') %>% 
+    select(year, lifeExp)
+
+gapminder %>% 
+  select(year, lifeExp, country) %>% 
+    filter(country == "Canada") %>% 
+
+select(-country)  #minus sign allows to remove. 
+
+gapminder %>% 
+  select(starts_with("co"))
+```
+
+
+
+
+
+
